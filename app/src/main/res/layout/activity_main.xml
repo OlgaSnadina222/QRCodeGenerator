@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/border_radius_input"
+        android:ems="10"
+        android:hint="@string/hint_generate"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey_hint"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/bScanner"
+        app:layout_constraintEnd_toEndOf="@+id/bScanner"
+        app:layout_constraintStart_toStartOf="@+id/bScanner" />
+
+    <Button
+        android:id="@+id/bGenerate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/blue"
+        android:text="@string/generate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/edInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imQR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/bScanner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/blue"
+        android:text="@string/scanner"
+        app:layout_constraintBottom_toTopOf="@+id/bGenerate"
+        app:layout_constraintEnd_toEndOf="@+id/bGenerate"
+        app:layout_constraintStart_toStartOf="@+id/bGenerate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
